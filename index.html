@@ -1,27 +1,69 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Birthday Wishes</title>
+  <title>Special Gift 🌹</title>
   <style>
     body {
-      background: linear-gradient(to right, #ff758c, #ff7eb3);
-      color: white;
-      text-align: center;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to right, #ff9a9e, #fecfef);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      overflow: hidden;
       font-family: Arial, sans-serif;
-      padding-top: 100px;
     }
-    h1 {
-      font-size: 40px;
+
+    .scene {
+      text-align: center;
+      position: relative;
     }
-    p {
-      font-size: 22px;
+
+    .girl {
+      font-size: 80px;
+      animation: moveGirl 3s forwards;
+    }
+
+    .rose {
+      font-size: 60px;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      opacity: 0;
+      animation: giveRose 3s forwards 2.5s;
+    }
+
+    h2 {
+      margin-top: 30px;
+      color: white;
+      font-size: 30px;
+      opacity: 0;
+      animation: showText 2s forwards 5s;
+    }
+
+    @keyframes moveGirl {
+      from { transform: translateX(-200px); }
+      to { transform: translateX(0); }
+    }
+
+    @keyframes giveRose {
+      to { opacity: 1; }
+    }
+
+    @keyframes showText {
+      to { opacity: 1; }
     }
   </style>
 </head>
 <body>
-  <h1>🎉 Hey Nandhu 🎉</h1>
-  <p>Happy Birthday 🎂</p>
-  <p>May your life be filled with joy & smiles 💖</p>
-  <p>– Soorya Ponnu 😊</p>
+
+  <div class="scene">
+    <div class="girl">👧</div>
+    <div class="rose">🌹</div>
+    <h2>For You With Love 💖</h2>
+  </div>
+
 </body>
 </html>
